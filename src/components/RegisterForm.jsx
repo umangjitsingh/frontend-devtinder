@@ -3,17 +3,17 @@ import axios from "axios";
 import {useDispatch} from "react-redux";
 import {addUser} from "../utils/userSlice.js";
 import {useNavigate} from "react-router";
-
+import {BASE_URL} from "../utils/constants.js";
 
 
 function RegisterForm() {
 
 	const [formInput, setFormInput] = useState({
-		emailId : "rohit@gmail.com",
-		password: "Rohit@123"
+		emailId : "adam@gmail.com",
+		password: "Adam@123"
 	})
 	const dispatch = useDispatch();
-	const navigate=useNavigate();
+	const navigate = useNavigate();
 
 
 	function handleChange(e) {
@@ -27,7 +27,7 @@ function RegisterForm() {
 		try {
 
 			e.preventDefault();
-			const response = await axios.post("http://localhost:3038/login", {
+			const response = await axios.post(BASE_URL+"/login" , {
 					emailId : formInput.emailId,
 					password: formInput.password
 				},
