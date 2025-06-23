@@ -11,7 +11,8 @@ function RegisterForm() {
 	const [formInput, setFormInput] = useState({
 		emailId : "adam@gmail.com",
 		password: "Adam@123"
-	})
+	});
+	const [error,setError]=useState("");
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
@@ -36,7 +37,9 @@ function RegisterForm() {
 			dispatch(addUser(response.data));
 			return navigate("/")
 		} catch (e) {
-			console.log(e.message)
+			setError(e?.response?.data?.message)
+			// console.log(e?.response?.data)
+
 		}
 
 
@@ -63,6 +66,7 @@ function RegisterForm() {
 				       className="input"
 				       placeholder="Password"/>
 
+				{error && <p className="text-red-600 pt-2 pb-1">{error}</p>}
 				<button
 					onClick={handleLogin}
 					type="submit"
