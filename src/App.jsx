@@ -6,6 +6,7 @@ import Profile from "./pages/Profile.jsx";
 import Login from "./pages/Login.jsx";
 import {Provider} from "react-redux";
 import appStore from "./utils/appStore.js";
+import Feed from "./pages/Feed.jsx";
 
 
 function App() {
@@ -25,6 +26,10 @@ function App() {
 				{
 					element: <Login/>,
 					path   : '/login'
+				},
+				{
+					element:<Feed/>,
+					path:'/feed'
 				}
 			]
 		}

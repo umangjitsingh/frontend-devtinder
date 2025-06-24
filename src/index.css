@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exile&display=swap');
 @import "tailwindcss";
 
 @theme {
-    --font-vig:'Viga','sans-serif'
+    --font-vig:'Viga','sans-serif';
+    --font-head:"Exile", system-ui;
 }
 
 

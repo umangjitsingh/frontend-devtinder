@@ -28,8 +28,8 @@ function Navbar() {
 		<div className="  px-2 py-1 border-neutral-700 border-b-[1px] ">
 			<div className="navbar bg-base-100 shadow-sm  ">
 				<div className="flex-1">
-					<a className="btn btn-ghost text-2xl text-teal-600 font-vig">
-						DevTinder <sup className="text-lg ">..💬</sup></a>
+					<a className="btn btn-ghost text-3xl text-zinc-300 font-head">
+						DevTinder <sup className="text-3xl ">..💬</sup></a>
 				</div>
 
 				{user && <div className="pr-6  ">
