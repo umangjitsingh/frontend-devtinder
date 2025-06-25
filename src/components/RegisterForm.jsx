@@ -9,8 +9,8 @@ import {BASE_URL} from "../utils/constants.js";
 function RegisterForm() {
 
 	const [formInput, setFormInput] = useState({
-		emailId : "adam@gmail.com",
-		password: "Adam@123"
+		emailId : "",
+		password: ""
 	});
 	const [error,setError]=useState("");
 	const dispatch = useDispatch();

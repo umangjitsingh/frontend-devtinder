@@ -4,9 +4,11 @@ import {useEffect} from "react";
 import {addUser} from "../utils/userSlice.js";
 import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from "react-router";
+import Layout from "../Layout.jsx";
 
 
-function Profile() {
+
+function Body() {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const userData = useSelector((store) => store.user);
@@ -22,7 +24,7 @@ function Profile() {
 			return;
 		}
 		try {
-			const response = await axios.get(BASE_URL + "/profile", {withCredentials: true});
+			const response = await axios.get(BASE_URL + "/profile/view", {withCredentials: true});
 			dispatch(addUser(response.data))
 
 		} catch (e) {
@@ -34,8 +36,8 @@ function Profile() {
 	}
 
 	return (
-		<div>u</div>
+		<Layout/>
 	);
 }
 
-export default Profile;
+export default Body;

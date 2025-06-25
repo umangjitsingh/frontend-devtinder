@@ -1,4 +1,6 @@
 function UserCard({ singleUser }) {
+
+
 	return (
 		<div className="relative bg-zinc-900 text-white rounded-xl w-88 h-[500px] border border-zinc-800 shadow-lg overflow-hidden hover:shadow-2xl transition-transform duration-300 hover:scale-[1.02]">
 			<img
@@ -31,7 +33,7 @@ function UserCard({ singleUser }) {
 			</div>
 
 			<div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-4">
-				<button className="px-10 cursor-pointer py-2 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 rounded-3xl text-base transition">
+				<button  className="px-10 cursor-pointer py-2 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 rounded-3xl text-base transition">
 					Pass
 				</button>
 				<button className="flex cursor-pointer items-center justify-evenly gap-2 px-6 py-2 bg-fuchsia-700 hover:bg-purple-700 text-white rounded-3xl text-base transition">

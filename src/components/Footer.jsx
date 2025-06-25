@@ -9,7 +9,7 @@ function Footer() {
 				<p className="text-neutral-400">Copyright
 					© {new Date().getFullYear()} - All right
 					reserved by
-					<span className="text-zinc-500 text-[15px] pl-1 bg-zinc-950 font-bold font-vig tracking-wide">TeamDevtinder</span>.
+					<span className="text-zinc-400 text-[15px] pl-1 bg-zinc-950 font-bold font-vig tracking-wide">TeamDevtinder</span>.
 				</p>
 			</aside>
 		</footer>
