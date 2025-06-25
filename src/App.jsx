@@ -26,7 +26,7 @@ function App() {
 				},
 				{
 					element:<Profile/>,
-					path:'profile'
+					path:'/profile'
 				}
 			]
 		}

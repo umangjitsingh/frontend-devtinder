@@ -1,16 +1,18 @@
-import React, {useState} from 'react'
+import  {useState} from 'react'
+import UserCard from "./UserCard.jsx";
 
 
 const EditProfile = ({user}) => {
-	const {firstName} = user;
-	console.log(firstName)
+
+	console.log(user.age)
 
 	const [profile, setProfile] = useState({
-		firstName: "",
-		lastName : "",
-		about    : "",
-		photo    : "",
-		password : ""
+		firstName: user?.firstName ||"",
+		lastName : user?.lastName || "",
+		about    : user?.about || "",
+		photo    : user?.photoUrl || "",
+		password : user?.password || "",
+		age:user?.age || ""
 	})
 
 	function handleChange(e) {
@@ -22,8 +24,8 @@ const EditProfile = ({user}) => {
 	}
 
 	return (
-		<div className="flex items-center justify-center">
-			<fieldset className="fieldset bg-zinc-900 border-zinc-400 rounded-box w-sm border mt-6 p-8">
+		<div className="flex justify-evenly  items-center ">
+			<fieldset className="fieldset bg-zinc-900 border-zinc-800 rounded-box w-sm border mt-6 p-8">
 				<legend className="fieldset-legend text-2xl tracking-tight uppercase text-zinc-300   font-bold">Edit
 					Profile
 				</legend>
@@ -34,7 +36,7 @@ const EditProfile = ({user}) => {
 						type="text" name="firstName"
 						value={profile.firstName}
 						placeholder="FirstName"
-						className="input mb-2"
+						className="   input mb-2"
 					/>
 
 					<label className="label">LastName</label>
@@ -85,6 +87,8 @@ const EditProfile = ({user}) => {
 				</form>
 
 			</fieldset>
+
+			<UserCard singleUser={user} size={0.9}/>
 		</div>
 	)
 }

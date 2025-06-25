@@ -1,8 +1,7 @@
-function UserCard({ singleUser }) {
-
+function UserCard({ singleUser,size }) {
 
 	return (
-		<div className="relative bg-zinc-900 text-white rounded-xl w-88 h-[500px] border border-zinc-800 shadow-lg overflow-hidden hover:shadow-2xl transition-transform duration-300 hover:scale-[1.02]">
+		<div style={{transform:`scale(${size})`}} className="relative bg-zinc-900 text-white rounded-xl w-88 h-[498px] border my-4 border-zinc-800 shadow-lg overflow-hidden hover:shadow-2xl transition-transform duration-300 hover:scale-[1.02] ">
 			<img
 				src={singleUser.photoUrl}
 				alt={`${singleUser.firstName} ${singleUser.lastName}`}

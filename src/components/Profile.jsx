@@ -5,10 +5,11 @@ import {useSelector} from "react-redux";
 
 const Profile = () => {
 	const user =useSelector((store)=>store.user);
+	const User=user?.user;
 
 	return (
 		user && <div>
-			<EditProfile user={user}/>
+			<EditProfile user={User}/>
 		</div>
 	)
 }
