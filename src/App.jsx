@@ -8,6 +8,8 @@ import {Provider} from "react-redux";
 import appStore from "./utils/appStore.js";
 import Feed from "./pages/Feed.jsx";
 import Profile from "./components/Profile.jsx";
+import Friends from "./components/Friends.jsx";
+import Requests from "./components/Requests.jsx";
 
 
 function App() {
@@ -27,6 +29,14 @@ function App() {
 				{
 					element:<Profile/>,
 					path:'/profile'
+				},
+				{
+					element:<Requests/>,
+					path:'/requests'
+				},
+				{
+					element:<Friends/>,
+					path:'/friends'
 				}
 			]
 		}

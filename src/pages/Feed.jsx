@@ -32,7 +32,11 @@ function Feed() {
 	}
 	return (<div className="  flex items-center justify-center bg-zinc-900">
 			{
-				feed && <UserCard singleUser={feed[0]}/>
+				feed && <div className=" relative flex flex-col items-center ">
+<h1 className=" absolute text-2xl font-semibold tracking-wide font-vig text-zinc-300 top-2 ">Suggestions..</h1>
+					<UserCard singleUser={feed[0]} size={0.88}/>
+				</div>
+
 			}
 		</div>
 	);
