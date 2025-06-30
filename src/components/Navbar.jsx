@@ -52,6 +52,7 @@ function Navbar() {
 								</Link>
 							</li>
 							<li><Link to="/friends">Friends</Link></li>
+							<li><Link to="/requests">IncomingRequests</Link></li>
 							<li><a onClick={handleLogout}>Logout</a></li>
 						</ul>
 					</div>
